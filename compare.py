@@ -16,6 +16,9 @@ if not api_key:
 
 genai.configure(api_key=api_key)
 
+# Verehrter Meister, hier werden die Modell-IDs definiert.
+# Falls ein Modell vorübergehend nicht genutzt werden soll (z.B. wegen Token-Limits),
+# kann es hier einfach auskommentiert werden.
 MODELLE = {
     "flash": "gemini-1.5-flash",
     "pro": "gemini-1.5-pro"
