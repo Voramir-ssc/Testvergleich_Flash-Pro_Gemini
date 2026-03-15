@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+ENV/
+
+# Umgebungsvariablen (API-Keys)
+.env
+
+# Projektspezifisch
+results/
