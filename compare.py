@@ -70,18 +70,24 @@ def main():
 
     for prompt_info in prompts:
         print(f"Teste Prompt: {prompt_info['name']}")
+        
+        # Verehrter Meister, hier sorgen wir für eine saubere Struktur.
         ergebnis = {
-            "prompt_name": prompt_info["name"],
-            "prompt_inhalt": prompt_info["inhalt"],
+            "prompt_name": str(prompt_info["name"]),
+            "prompt_inhalt": str(prompt_info["inhalt"]),
             "zeitstempel": datetime.now().isoformat(),
-            "antworten": {}
+            "antworten": {}  # Explizite Initialisierung als Dictionary
         }
+
+        # Wir stellen sicher, dass 'antworten' als Dictionary erkannt wird.
+        antworten_dict = {}
 
         for kuerzel, modell_id in MODELLE.items():
             print(f"  Rufe Modell auf: {modell_id}...")
-            antwort_daten = hole_antwort(modell_id, prompt_info["inhalt"])
-            ergebnis["antworten"][kuerzel] = antwort_daten
+            antwort_daten = hole_antwort(modell_id, str(prompt_info["inhalt"]))
+            antworten_dict[str(kuerzel)] = antwort_daten
         
+        ergebnis["antworten"] = antworten_dict
         alle_ergebnisse.append(ergebnis)
 
     # Ergebnisse speichern
