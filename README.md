@@ -9,7 +9,7 @@ Dieses Projekt dient dem Vergleich der Kapazitäten und Antwortqualitäten der G
 - `.env`: Enthält den `GOOGLE_API_KEY` (nicht im Repository).
 
 ## Einrichtung
-1. Installiere die Abhängigkeiten: `pip install -r requirements.txt`
+1. Installiere die Abhängigkeiten: `pip3 install -r requirements.txt`
 2. Erstelle eine `.env` Datei basierend auf `.env.example` und füge deinen API-Key hinzu.
 3. Lege deine Test-Prompts als Textdateien in den `prompts/` Ordner.
 
